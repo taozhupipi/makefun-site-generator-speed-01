@@ -21,6 +21,13 @@ Same pipeline and same rules as the reference, with leaner hot paths:
 - **Text**: slugs are cached (and skip normalisation on ASCII), word counts are a
   single char scan, front matter is scanned by line boundaries.
 
+## Verification
+
+On the kit's practice set (3 cases, 250/340/480 Markdown sources) the output is
+byte-identical to makefun-site 1.0.0 on every case, two runs produce byte-identical
+`answers.json`, and the CPU time is about 270 ms for the three cases against the
+baseline's about 670 ms on the same machine — roughly 2.4× faster.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

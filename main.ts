@@ -1,8 +1,9 @@
-// The harness runs `node /bot/main.ts` (node22). It reads every case from
-// /input/cases.json (a JSON array of {id, input}), answers each one alone with
-// run() from solve.js, and writes /output/answers.json: a JSON array of the
-// answers, one per case and in the cases' order. Outside a container
-// MAKEFUN_INPUT_DIR and MAKEFUN_OUTPUT_DIR stand in for /input and /output.
+// The harness runs `node /bot/main.ts` (Node 22.18 or later runs its TypeScript as
+// it is; on Node 22.6 to 22.17 run it as node --experimental-strip-types main.ts).
+// It reads every case from /input/cases.json (a JSON array of {id, input}),
+// answers each one alone with run() from solve.js, and writes /output/answers.json:
+// a JSON array of the answers, one per case and in the cases' order. Outside a
+// container MAKEFUN_INPUT_DIR and MAKEFUN_OUTPUT_DIR stand in for /input and /output.
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
